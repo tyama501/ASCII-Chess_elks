@@ -16,7 +16,7 @@ PRGS = achess
 all: $(PRGS)
 
 achess: src/chess3.o
-	$(LD) $(LDFLAGS) -o achess src/chess3.o $(LDLIBS)
+	$(LD) $(LDFLAGS) -maout-heap=0xffff -o achess src/chess3.o $(LDLIBS)
 
 install: $(PRGS)
 	$(INSTALL) $(PRGS) $(DESTDIR)/bin
