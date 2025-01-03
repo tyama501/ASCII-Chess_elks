@@ -264,8 +264,8 @@ void RookAI(char swap[2][8][8], char side, int i, int j, node* root)
 {
     //printf("rook %d %d %c\n",i,j,side);
     int moves[56];
-    int i1,i2,i3,i4 = i;
-    int j1,j2,j3,j4 = j;
+    int i1 = i,i2 = i,i3 = i,i4 = i;
+    int j1 = j,j2 = j,j3 = j,j4 = j;
     int outer = 0;
     int inner =1;
 
@@ -579,7 +579,7 @@ void AIfunc(char origin[2][8][8])
     char finl_side = '\0';
 
     z =0;
-    int i1,j1,k1,l1;
+    int i1 =0,j1 =0,k1 =0,l1 =0;
     for(z;z<=99; z++)
     {
        if(root->array[z]!=NULL)
@@ -861,7 +861,7 @@ void FreeAll(node* root)                                         /*Returning the
 {                                                                /*so as to avoid an overhead*/
   if(root!= NULL)
   {
-    int z,c =0;
+    int z =0,c =0;
     for(z; z<=99; z++)
     {
        if(root->array[z] != NULL)
