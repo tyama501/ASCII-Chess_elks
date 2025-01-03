@@ -38,7 +38,7 @@ void common_init(int i1, int j1, int k1, int l1, char swap[2][8][8], node *root,
 
 void assign_ent(char side, node* branch, char swap[2][8][8])
 {
-    int i,j=0;
+    int i=0,j=0;
 
 /*    printf("\n\n\n\n");
     printing(swap);*/
@@ -509,7 +509,7 @@ void AIfunc(char origin[2][8][8])
     char copy[2][8][8];
     char swap[2][8][8];
 
-    int a,b =0;
+    int a=0,b=0;
     for(a; a<=7; a++)
     {
       b=0;
