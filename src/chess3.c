@@ -7,8 +7,10 @@
 #include <unistd.h>
 #include "AI.h"
 
+#ifndef ELKS
 //Added by Grant for testing:
 #include "CuTest.h"
+#endif
 
 /* 
   1 = PAWN
@@ -41,6 +43,7 @@ void printing(char chp [2][8][8]);
 
 int main(int argc, char *argv[])
 {
+#ifndef ELKS
   // Added by Grant for testing
 
   if (argc == 2 && strcmp(argv[1], "--test") == 0) {
@@ -49,6 +52,7 @@ int main(int argc, char *argv[])
 
   else {
 
+#endif
   //Original program
     char chess[2][8][8]={
                         {
@@ -304,8 +308,10 @@ int main(int argc, char *argv[])
   }
 
  }
+#ifndef ELKS
   }
-  
+#endif
+
    return 0;
 }
 
@@ -504,6 +510,7 @@ int checkPawnMove(int fromRow, int fromCol, int toRow, int toCol, int printError
       }
     }
   }
+  return error;
 }
 
 int checkKnightMove(char ent1, int fromRow, int fromCol, int toRow, int toCol, int printErrors, char chess[2][8][8]){
